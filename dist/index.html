@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.3a4ddde5.png">
+    <link rel="stylesheet" href="/index.dda6fa14.css">
+    <script defer="" src="https://kit.fontawesome.com/37007fa821.js" crossorigin="anonymous"></script>
+    <script src="/index.7ff0ec52.js" defer=""></script>
+    <title>Todo List</title>
+  </head>
+  <body class="dark:bg-veryDarkBlue">
+    <header class="lg:bg[url('../images/bg-desktop-light.png')] h-[40vh] bg-[url('../images/bg-mobile-light.png')] bg-cover bg-center bg-no-repeat dark:bg-[url('../images/bg-mobile-dark.png')] dark:lg:bg-[url('../images/bg-desktop-dark.png')]"></header>
+
+    <main class="mx-8 flex max-w-[976px] translate-y-[-200px] flex-col gap-[1.5rem] lg:mx-auto">
+      <div class="heading flex items-center justify-between">
+        <h2 class="text-2xl font-bold tracking-widest text-veryLightGray">TODO</h2>
+        <img src="/icon-moon.29939b81.svg" alt="icon-moon" class="bgToggle cursor-pointer">
+      </div>
+
+      <!-- Form to add a new todo -->
+      <form action="" class="inputTodo relative flex w-full items-center gap-4">
+        <input type="checkbox" disabled="" class="border-gray absolute left-3 h-[17px] w-[18px] appearance-none rounded-[50%] border dark:border-veryDarkGrayishBlue">
+        <input type="text" class="todoInput h-12 w-full rounded-md bg-veryLightGray px-10 text-veryDarkGrayishBlue outline-none dark:bg-veryDarkDesaturatedBlue dark:text-lightGrayishBlue" placeholder="Create a new todo...">
+
+        <!-- Category Dropdown for new todo -->
+        <select class="todoCategory h-12 rounded-md bg-veryLightGray px-4 text-veryDarkGrayishBlue dark:bg-veryDarkDesaturatedBlue dark:text-lightGrayishBlue">
+          <option value="shopping">Shopping</option>
+          <option value="work">Work</option>
+          <option value="personal">Personal</option>
+          <option value="other">Other</option>
+        </select>
+      </form>
+
+      <!-- Todo Section where todo items are dynamically added -->
+      <div class="todo--section w-full rounded-md">
+        <!-- The todos will be rendered here dynamically -->
+      </div>
+
+      <!-- Category Filter Dropdown -->
+      <div class="category-filter-container flex items-center justify-between">
+        <p class="text-lg font-bold">Filter by Category:</p>
+        <select class="categoryFilter rounded-md bg-veryLightGray px-4 text-veryDarkGrayishBlue dark:bg-veryDarkDesaturatedBlue dark:text-lightGrayishBlue">
+          <option value="all">All</option>
+          <option value="shopping">Shopping</option>
+          <option value="work">Work</option>
+          <option value="personal">Personal</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <!-- Navigation section -->
+      <div class="navigation-container flex w-full items-center justify-center rounded bg-white px-4 py-3 dark:border-veryLightGrayishBlue dark:bg-veryDarkDesaturatedBlue md:justify-between">
+        <p class="itemsCounter hidden cursor-pointer text-sm text-veryDarkGrayishBlue hover:text-veryDarkBlue dark:text-darkGrayishBlue dark:hover:text-lightGrayishBlueHover md:block">5 items left</p>
+
+        <div class="navigation flex items-center gap-[1rem] md:gap-[0.5rem] lg:gap-[3rem]">
+          <p class="nav all nav-active cursor-pointer text-sm font-bold text-veryDarkGrayishBlue hover:text-veryDarkBlue dark:text-darkGrayishBlue dark:hover:text-lightGrayishBlueHover md:font-light">All</p>
+          <p class="nav active cursor-pointer text-sm font-bold text-veryDarkGrayishBlue hover:text-veryDarkBlue dark:text-darkGrayishBlue dark:hover:text-lightGrayishBlueHover md:font-light">Active</p>
+          <p class="nav completed cursor-pointer text-sm font-bold text-veryDarkGrayishBlue hover:text-veryDarkBlue dark:text-darkGrayishBlue dark:hover:text-lightGrayishBlueHover md:font-light">Completed</p>
+        </div>
+
+        <p class="clearCompleted hidden cursor-pointer text-sm text-veryDarkGrayishBlue hover:text-veryDarkBlue dark:text-darkGrayishBlue dark:hover:text-lightGrayishBlueHover md:block">Clear Completed</p>
+      </div>
+
+      <div class="w-full">
+        <p class="text-center text-sm text-veryDarkGrayishBlue opacity-50">Drag and drop to reorder list</p>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>
